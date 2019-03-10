@@ -94,6 +94,7 @@ namespace Hoverfly.Core.Tests
 
                 hoverfly.Stop();
                 // just a comments
+                // one more comments
             }
         }
         [Fact]
