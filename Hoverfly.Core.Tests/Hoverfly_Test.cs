@@ -93,8 +93,6 @@ namespace Hoverfly.Core.Tests
                 hoverfly.ExportSimulation(destinatonSource);
 
                 hoverfly.Stop();
-                // just a comments
-                // one more comments
             }
         }
         [Fact]
