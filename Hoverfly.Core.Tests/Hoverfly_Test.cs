@@ -74,7 +74,9 @@ namespace Hoverfly.Core.Tests
                 Assert.Equal(HoverflyMode.Spy, hoverfly.GetMode());
             }
         }
-
+        /// <summary>
+        /// capture from https
+        /// </summary>
         [Fact]
         public void ShouldExportSimulation_WithNginx_Weather_Capture()
         {
@@ -92,7 +94,7 @@ namespace Hoverfly.Core.Tests
                 var destinatonSource = new FileSimulationSource("eddy_simulation_weather.json");
                 hoverfly.ExportSimulation(destinatonSource);
 
-                hoverfly.Stop();
+                hoverfly.Stop(); 
             }
         }
         [Fact]
