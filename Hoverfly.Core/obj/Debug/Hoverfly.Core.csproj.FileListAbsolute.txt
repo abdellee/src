@@ -1,0 +1,8 @@
+E:\hoverfly_code\hoverfly-dotnet\src\Hoverfly.Core\bin\Debug\Hoverfly.Core.dll
+E:\hoverfly_code\hoverfly-dotnet\src\Hoverfly.Core\bin\Debug\Hoverfly.Core.pdb
+E:\hoverfly_code\hoverfly-dotnet\src\Hoverfly.Core\bin\Debug\Newtonsoft.Json.dll
+E:\hoverfly_code\hoverfly-dotnet\src\Hoverfly.Core\bin\Debug\Newtonsoft.Json.xml
+E:\hoverfly_code\hoverfly-dotnet\src\Hoverfly.Core\obj\Debug\Hoverfly.Core.dll
+E:\hoverfly_code\hoverfly-dotnet\src\Hoverfly.Core\obj\Debug\Hoverfly.Core.pdb
+E:\hoverfly_code\hoverfly-dotnet\src\Hoverfly.Core\obj\Debug\Hoverfly.Core.csproj.CoreCompileInputs.cache
+E:\hoverfly_code\hoverfly-dotnet\src\Hoverfly.Core\obj\Debug\Hoverfly.Core.csproj.CopyComplete

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>@project@</id>
+    <title>Hoverfly .Net</title>
+    <version>@build.number@</version>
+    <authors>@authors@</authors>
+    <owners>@authors@</owners>
+    <licenseUrl>https://github.com/fredrikn/hoverfly-dotnet/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/fredrikn/hoverfly-dotnet</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/SpectoLabs/hoverpy/master/docs/fly.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>@description@</description>
+    <summary>Hoverfly .Net is a native language binding which gives you an expressive API for managing Hoverfly in .Net. It gives you a Hoverfly class which abstracts away the binary and API calls.</summary>
+    <releaseNotes>@releaseNotes@</releaseNotes>
+    <tags>API testing stubbing mocking proxy hoverfly</tags>
+    @dependencies@
+  </metadata>
+</package>

@@ -1,0 +1,1 @@
+E:\hoverfly_code\hoverfly-dotnet\src\Magnalane.CompareComplyV1.IT\obj\Debug\Magnalane.CompareComplyV1.IT.csprojResolveAssemblyReference.cache

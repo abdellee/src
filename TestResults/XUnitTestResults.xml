@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<assemblies timestamp="02/17/2019 19:49:35">
+  <assembly name="E:\hoverfly_code\hoverfly-dotnet\src\Hoverfly.Core.Tests\bin\Release\Hoverfly.Core.Tests.DLL" environment="64-bit .NET 4.0.30319.42000 [collection-per-class, non-parallel]" test-framework="xUnit.net 2.3.1.3858" run-date="2019-02-17" run-time="19:48:50" config-file="E:\hoverfly_code\hoverfly-dotnet\src\packages\FAKE\xunit.runner.console\tools\net452\xunit.console.exe.Config" total="48" passed="47" failed="1" skipped="0" time="44.476" errors="0">
+    <errors />
+    <collection total="5" passed="5" failed="0" skipped="0" name="Test collection for Hoverfly.Core.Tests.Dsl.Dsl_Test" time="0.171">
+      <test name="Hoverfly.Core.Tests.Dsl.Dsl_Test.ShouldReturnCorrectDelaySettings_WhenUsingPut" type="Hoverfly.Core.Tests.Dsl.Dsl_Test" method="ShouldReturnCorrectDelaySettings_WhenUsingPut" time="0.1672394" result="Pass" />
+      <test name="Hoverfly.Core.Tests.Dsl.Dsl_Test.ShouldReturnCorrectNumberDelays_WhenGettingSimulation" type="Hoverfly.Core.Tests.Dsl.Dsl_Test" method="ShouldReturnCorrectNumberDelays_WhenGettingSimulation" time="0.0009437" result="Pass" />
+      <test name="Hoverfly.Core.Tests.Dsl.Dsl_Test.ShouldReturnCorrectDelaySettings_WhenUsingGet" type="Hoverfly.Core.Tests.Dsl.Dsl_Test" method="ShouldReturnCorrectDelaySettings_WhenUsingGet" time="0.000729" result="Pass" />
+      <test name="Hoverfly.Core.Tests.Dsl.Dsl_Test.ShouldReturnCorrectDelaySettings_WhenUsingPost" type="Hoverfly.Core.Tests.Dsl.Dsl_Test" method="ShouldReturnCorrectDelaySettings_WhenUsingPost" time="0.0007109" result="Pass" />
+      <test name="Hoverfly.Core.Tests.Dsl.Dsl_Test.ShouldReturnCorrectNumberOfRequest_WhenGettingSimulation" type="Hoverfly.Core.Tests.Dsl.Dsl_Test" method="ShouldReturnCorrectNumberOfRequest_WhenGettingSimulation" time="0.000892" result="Pass" />
+    </collection>
+    <collection total="9" passed="9" failed="0" skipped="0" name="Test collection for Hoverfly.Core.Tests.Dsl.StubServiceBuilder_Test" time="0.012">
+      <test name="Hoverfly.Core.Tests.Dsl.StubServiceBuilder_Test.ShouldCreateDeleteRequest" type="Hoverfly.Core.Tests.Dsl.StubServiceBuilder_Test" method="ShouldCreateDeleteRequest" time="0.000697" result="Pass" />
+      <test name="Hoverfly.Core.Tests.Dsl.StubServiceBuilder_Test.ShouldCreateRequest" type="Hoverfly.Core.Tests.Dsl.StubServiceBuilder_Test" method="ShouldCreateRequest" time="0.0055756" result="Pass" />
+      <test name="Hoverfly.Core.Tests.Dsl.StubServiceBuilder_Test.ShouldCreatePostRequest" type="Hoverfly.Core.Tests.Dsl.StubServiceBuilder_Test" method="ShouldCreatePostRequest" time="0.0010431" result="Pass" />
+      <test name="Hoverfly.Core.Tests.Dsl.StubServiceBuilder_Test.ShouldCreatePutRequest" type="Hoverfly.Core.Tests.Dsl.StubServiceBuilder_Test" method="ShouldCreatePutRequest" time="0.000534" result="Pass" />
+      <test name="Hoverfly.Core.Tests.Dsl.StubServiceBuilder_Test.ShouldCreateARequestWithHttpUrlScheme" type="Hoverfly.Core.Tests.Dsl.StubServiceBuilder_Test" method="ShouldCreateARequestWithHttpUrlScheme" time="0.0005344" result="Pass" />
+      <test name="Hoverfly.Core.Tests.Dsl.StubServiceBuilder_Test.ShouldCreateARequestWithHttpsUrlScheme" type="Hoverfly.Core.Tests.Dsl.StubServiceBuilder_Test" method="ShouldCreateARequestWithHttpsUrlScheme" time="0.0005554" result="Pass" />
+      <test name="Hoverfly.Core.Tests.Dsl.StubServiceBuilder_Test.ShouldDefaultToHttpScheme_WhenCreatingRequestWithOutSchema" type="Hoverfly.Core.Tests.Dsl.StubServiceBuilder_Test" method="ShouldDefaultToHttpScheme_WhenCreatingRequestWithOutSchema" time="0.0005192" result="Pass" />
+      <test name="Hoverfly.Core.Tests.Dsl.StubServiceBuilder_Test.ShouldCreateCorrectResponse" type="Hoverfly.Core.Tests.Dsl.StubServiceBuilder_Test" method="ShouldCreateCorrectResponse" time="0.0012126" result="Pass" />
+      <test name="Hoverfly.Core.Tests.Dsl.StubServiceBuilder_Test.ShouldCreateGetRequest" type="Hoverfly.Core.Tests.Dsl.StubServiceBuilder_Test" method="ShouldCreateGetRequest" time="0.0008571" result="Pass" />
+    </collection>
+    <collection total="11" passed="11" failed="0" skipped="0" name="Test collection for Hoverfly.Core.Tests.HoverflyRunner_Test" time="17.584">
+      <test name="Hoverfly.Core.Tests.HoverflyRunner_Test.ShouldReturnCorrectSimulation_WhenUsingSimulateWithDsl" type="Hoverfly.Core.Tests.HoverflyRunner_Test" method="ShouldReturnCorrectSimulation_WhenUsingSimulateWithDsl" time="2.8065585" result="Pass" />
+      <test name="Hoverfly.Core.Tests.HoverflyRunner_Test.ShouldGetSimulationResponse_WhenUsingSpyModeAndSimulationDslIsAreadyAdded" type="Hoverfly.Core.Tests.HoverflyRunner_Test" method="ShouldGetSimulationResponse_WhenUsingSpyModeAndSimulationDslIsAreadyAdded" time="1.4072367" result="Pass" />
+      <test name="Hoverfly.Core.Tests.HoverflyRunner_Test.ShouldGetSimulationResponse_WhenUsingSpyModeAndSimulationFromFileIsAreadyAdded" type="Hoverfly.Core.Tests.HoverflyRunner_Test" method="ShouldGetSimulationResponse_WhenUsingSpyModeAndSimulationFromFileIsAreadyAdded" time="1.1956876" result="Pass" />
+      <test name="Hoverfly.Core.Tests.HoverflyRunner_Test.ShouldStartInSimulationMode" type="Hoverfly.Core.Tests.HoverflyRunner_Test" method="ShouldStartInSimulationMode" time="2.7755935" result="Pass" />
+      <test name="Hoverfly.Core.Tests.HoverflyRunner_Test.ShouldExportSimulationOnStop_WhenInCaptureMode" type="Hoverfly.Core.Tests.HoverflyRunner_Test" method="ShouldExportSimulationOnStop_WhenInCaptureMode" time="1.7993158" result="Pass" />
+      <test name="Hoverfly.Core.Tests.HoverflyRunner_Test.ShouldLoadSimulation_WhenStartInSimulationModeWithASimulationSourceAsFile" type="Hoverfly.Core.Tests.HoverflyRunner_Test" method="ShouldLoadSimulation_WhenStartInSimulationModeWithASimulationSourceAsFile" time="1.1884374" result="Pass" />
+      <test name="Hoverfly.Core.Tests.HoverflyRunner_Test.ShouldLoadSimulation_WhenStartInSimulationModeWithASimulationSource" type="Hoverfly.Core.Tests.HoverflyRunner_Test" method="ShouldLoadSimulation_WhenStartInSimulationModeWithASimulationSource" time="1.273303" result="Pass" />
+      <test name="Hoverfly.Core.Tests.HoverflyRunner_Test.ShouldGetSimulationResponse_WhenUsingSpyModeAndSimulationDslIsAreadyAddedDuringStart" type="Hoverfly.Core.Tests.HoverflyRunner_Test" method="ShouldGetSimulationResponse_WhenUsingSpyModeAndSimulationDslIsAreadyAddedDuringStart" time="1.2666131" result="Pass" />
+      <test name="Hoverfly.Core.Tests.HoverflyRunner_Test.ShouldStartInCaptureMode" type="Hoverfly.Core.Tests.HoverflyRunner_Test" method="ShouldStartInCaptureMode" time="1.2315108" result="Pass" />
+      <test name="Hoverfly.Core.Tests.HoverflyRunner_Test.ShouldGetExternalResponse_WhenUsingSpyModeAndSimulationIsNotAdded" type="Hoverfly.Core.Tests.HoverflyRunner_Test" method="ShouldGetExternalResponse_WhenUsingSpyModeAndSimulationIsNotAdded" time="1.4445898" result="Pass" />
+      <test name="Hoverfly.Core.Tests.HoverflyRunner_Test.ShouldReturnCorrectSimulations_WhenUsingAnExistingSimulateAndWhenAddingOne" type="Hoverfly.Core.Tests.HoverflyRunner_Test" method="ShouldReturnCorrectSimulations_WhenUsingAnExistingSimulateAndWhenAddingOne" time="1.195461" result="Pass" />
+    </collection>
+    <collection total="2" passed="2" failed="0" skipped="0" name="Test collection for Hoverfly.Core.Tests.FileSimulationSource_Test" time="0.090">
+      <test name="Hoverfly.Core.Tests.FileSimulationSource_Test.ShouldReturnCorrectSimulationDate" type="Hoverfly.Core.Tests.FileSimulationSource_Test" method="ShouldReturnCorrectSimulationDate" time="0.001268" result="Pass" />
+      <test name="Hoverfly.Core.Tests.FileSimulationSource_Test.ShouldSaveTheSimulation" type="Hoverfly.Core.Tests.FileSimulationSource_Test" method="ShouldSaveTheSimulation" time="0.0887227" result="Pass" />
+    </collection>
+    <collection total="21" passed="20" failed="1" skipped="0" name="Test collection for Hoverfly.Core.Tests.Hoverfly_Test" time="26.388">
+      <test name="Hoverfly.Core.Tests.Hoverfly_Test.ShouldGetExternalResponse_WhenUsingSpyModeAndSimulationIsNotAdded" type="Hoverfly.Core.Tests.Hoverfly_Test" method="ShouldGetExternalResponse_WhenUsingSpyModeAndSimulationIsNotAdded" time="1.3773824" result="Pass" />
+      <test name="Hoverfly.Core.Tests.Hoverfly_Test.ShouldReturnCorrectConfiguredAdminPort" type="Hoverfly.Core.Tests.Hoverfly_Test" method="ShouldReturnCorrectConfiguredAdminPort" time="0.0008969" result="Pass" />
+      <test name="Hoverfly.Core.Tests.Hoverfly_Test.ShouldGetHeaderInTheSimulation_WhenCapturingAllHeaders" type="Hoverfly.Core.Tests.Hoverfly_Test" method="ShouldGetHeaderInTheSimulation_WhenCapturingAllHeaders" time="1.2652284" result="Pass" />
+      <test name="Hoverfly.Core.Tests.Hoverfly_Test.ShouldNotCaptureNoneCaptureHeader_WhenCapturingSpecificHeader" type="Hoverfly.Core.Tests.Hoverfly_Test" method="ShouldNotCaptureNoneCaptureHeader_WhenCapturingSpecificHeader" time="1.3389643" result="Pass" />
+      <test name="Hoverfly.Core.Tests.Hoverfly_Test.ShouldBeDelay_WhenAddingADelaryToRequestWithDsl" type="Hoverfly.Core.Tests.Hoverfly_Test" method="ShouldBeDelay_WhenAddingADelaryToRequestWithDsl" time="3.2758449" result="Pass" />
+      <test name="Hoverfly.Core.Tests.Hoverfly_Test.ShouldReturnCorrectSimluationFromHoverfly_WhenImportingSimulation" type="Hoverfly.Core.Tests.Hoverfly_Test" method="ShouldReturnCorrectSimluationFromHoverfly_WhenImportingSimulation" time="1.3046868" result="Pass" />
+      <test name="Hoverfly.Core.Tests.Hoverfly_Test.ShouldReturnCorrectSimulationDataResult_WhenHoverflyInSimulationMode" type="Hoverfly.Core.Tests.Hoverfly_Test" method="ShouldReturnCorrectSimulationDataResult_WhenHoverflyInSimulationMode" time="1.2749323" result="Pass" />
+      <test name="Hoverfly.Core.Tests.Hoverfly_Test.ShouldGetCorrectResponse_WhenUsingDsl" type="Hoverfly.Core.Tests.Hoverfly_Test" method="ShouldGetCorrectResponse_WhenUsingDsl" time="1.1880705" result="Pass" />
+      <test name="Hoverfly.Core.Tests.Hoverfly_Test.ShouldReturnCorrectConfiguredProxyPort" type="Hoverfly.Core.Tests.Hoverfly_Test" method="ShouldReturnCorrectConfiguredProxyPort" time="0.0009724" result="Pass" />
+      <test name="Hoverfly.Core.Tests.Hoverfly_Test.ShouldUseRemoteHovervyInstance" type="Hoverfly.Core.Tests.Hoverfly_Test" method="ShouldUseRemoteHovervyInstance" time="1.2869417" result="Pass" />
+      <test name="Hoverfly.Core.Tests.Hoverfly_Test.ShouldReturnSpyMode_WhenHoverFlyIsSetToUseSpyMode" type="Hoverfly.Core.Tests.Hoverfly_Test" method="ShouldReturnSpyMode_WhenHoverFlyIsSetToUseSpyMode" time="1.2227803" result="Pass" />
+      <test name="Hoverfly.Core.Tests.Hoverfly_Test.ShouldReturnCaptureMode_WhenHoverFlyIsSetToUseCaptureMode" type="Hoverfly.Core.Tests.Hoverfly_Test" method="ShouldReturnCaptureMode_WhenHoverFlyIsSetToUseCaptureMode" time="1.1566164" result="Pass" />
+      <test name="Hoverfly.Core.Tests.Hoverfly_Test.ShouldReturnCorrectSimulations_WhenUsingAnExistingSimulateAndWhenAddingOne" type="Hoverfly.Core.Tests.Hoverfly_Test" method="ShouldReturnCorrectSimulations_WhenUsingAnExistingSimulateAndWhenAddingOne" time="1.1663388" result="Pass" />
+      <test name="Hoverfly.Core.Tests.Hoverfly_Test.ShouldGetSimulationResponse_WhenUsingSpyModeAndSimulationIsAreadyAdded" type="Hoverfly.Core.Tests.Hoverfly_Test" method="ShouldGetSimulationResponse_WhenUsingSpyModeAndSimulationIsAreadyAdded" time="1.1663638" result="Pass" />
+      <test name="Hoverfly.Core.Tests.Hoverfly_Test.ShouldReturnCorrectRestultFromAPutRequest_WhenImportingSimulationAndUsingSimulationMode" type="Hoverfly.Core.Tests.Hoverfly_Test" method="ShouldReturnCorrectRestultFromAPutRequest_WhenImportingSimulationAndUsingSimulationMode" time="1.8599643" result="Fail">
+        <failure exception-type="System.TimeoutException">
+          <message><![CDATA[System.TimeoutException : Timeout while waiting for Hoverfly process to be closed.]]></message>
+          <stack-trace><![CDATA[   at Hoverfly.Core.Hoverfly.Stop() in E:\hoverfly_code\hoverfly-dotnet\src\Hoverfly.Core\Hoverfly.cs:line 96
+   at Hoverfly.Core.Tests.Hoverfly_Test.<ShouldReturnCorrectRestultFromAPutRequest_WhenImportingSimulationAndUsingSimulationMode>d__10.MoveNext() in E:\hoverfly_code\hoverfly-dotnet\src\Hoverfly.Core.Tests\Hoverfly_Test.cs:line 200
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)]]></stack-trace>
+        </failure>
+      </test>
+      <test name="Hoverfly.Core.Tests.Hoverfly_Test.ShouldGetHeaderInTheSimulation_WhenCapturingSpecificHeader" type="Hoverfly.Core.Tests.Hoverfly_Test" method="ShouldGetHeaderInTheSimulation_WhenCapturingSpecificHeader" time="1.2680754" result="Pass" />
+      <test name="Hoverfly.Core.Tests.Hoverfly_Test.ShouldReturnSimulateMode_WhenHoverFlyIsSetToUseSimulateMode" type="Hoverfly.Core.Tests.Hoverfly_Test" method="ShouldReturnSimulateMode_WhenHoverFlyIsSetToUseSimulateMode" time="1.1626207" result="Pass" />
+      <test name="Hoverfly.Core.Tests.Hoverfly_Test.ShouldReturnCorrectHoverflyMode" type="Hoverfly.Core.Tests.Hoverfly_Test" method="ShouldReturnCorrectHoverflyMode" time="1.147585" result="Pass" />
+      <test name="Hoverfly.Core.Tests.Hoverfly_Test.ShouldReturnCorrectRestultFromARequest_WhenImportingSimulationAndUsingSimulationMode" type="Hoverfly.Core.Tests.Hoverfly_Test" method="ShouldReturnCorrectRestultFromARequest_WhenImportingSimulationAndUsingSimulationMode" time="1.2919139" result="Pass" />
+      <test name="Hoverfly.Core.Tests.Hoverfly_Test.ShouldExportSimulation" type="Hoverfly.Core.Tests.Hoverfly_Test" method="ShouldExportSimulation" time="1.3723605" result="Pass" />
+      <test name="Hoverfly.Core.Tests.Hoverfly_Test.ShouldReturnCorrectMode_WhenHoverflyModeIsChanged" type="Hoverfly.Core.Tests.Hoverfly_Test" method="ShouldReturnCorrectMode_WhenHoverflyModeIsChanged" time="1.2593609" result="Pass" />
+    </collection>
+  </assembly>
+</assemblies>

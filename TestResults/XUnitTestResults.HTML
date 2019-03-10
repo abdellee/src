@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+  <head>
+    <title>xUnit.net Test Results</title>
+    <style type="text/css">
+          body { font-family: Calibri, Verdana, Arial, sans-serif; background-color: White; color: Black; }
+          h2,h3,h4,h5 { margin: 0; padding: 0; }
+          h3 { font-weight: normal; }
+          h4 { margin: 0.5em 0; }
+          h5 { font-weight: normal; font-style: italic; margin-bottom: 0.75em; }
+          h6 { font-size: 0.9em; font-weight: bold; margin: 0.5em 0 0 0.75em; padding: 0; }
+          pre,table { font-family: Consolas; font-size: 0.8em; margin: 0 0 0 1em; padding: 0; }
+          table { padding-bottom: 0.25em; }
+          th { padding: 0 0.5em; border-right: 1px solid #bbb; text-align: left; }
+          td { padding-left: 0.5em; }
+          .divided { border-top: solid 1px #f0f5fa; padding-top: 0.5em; }
+          .row, .altrow { padding: 0.1em 0.3em; }
+          .row { background-color: #f0f5fa; }
+          .altrow { background-color: #e1ebf4; }
+          .success, .failure, .skipped { font-family: Arial Unicode MS; font-weight: normal; float: left; width: 1em; display: block; }
+          .success { color: #0c0; }
+          .failure { color: #c00; }
+          .skipped { color: #cc0; }
+          .timing { float: right; }
+          .indent { margin: 0.25em 0 0.5em 2em; }
+          .clickable { cursor: pointer; }
+          .testcount { font-size: 85%; }
+        </style>
+    <script language="javascript">
+          function ToggleClass(id) {
+            var elem = document.getElementById(id);
+            if (elem.style.display == "none") {
+              elem.style.display = "block";
+            }
+            else {
+              elem.style.display = "none";
+            }
+          }
+        </script>
+  </head>
+  <body>
+    <h3 class="divided">
+      <b>Assemblies Run</b>
+    </h3>
+    <div>E:\hoverfly_code\hoverfly-dotnet\src\Hoverfly.Core.Tests\bin\Release\Hoverfly.Core.Tests.DLL</div>
+    <h3 class="divided">
+      <b>Summary</b>
+    </h3>
+    <div>
+          Tests run: <a href="#all"><b>48</b></a> —
+          
+            Failures: <a href="#failures"><b>1</b></a>,
+          
+          Run time: <b>44.476s</b>,
+          Finished: <b>02/17/2019 19:49:35</b></div>
+    <br />
+    <h2>
+      <a id="failures" />Failed tests
+          </h2>
+    <div class="row">
+      <span class="timing">1.8599643s
+        </span>
+      <span class="failure">✘</span>
+       Hoverfly.Core.Tests.Hoverfly_Test.ShouldReturnCorrectRestultFromAPutRequest_WhenImportingSimulationAndUsingSimulationMode<br clear="all" /><pre>System.TimeoutException : Timeout while waiting for Hoverfly process to be closed.</pre><pre>   at Hoverfly.Core.Hoverfly.Stop() in E:\hoverfly_code\hoverfly-dotnet\src\Hoverfly.Core\Hoverfly.cs:line 96
+   at Hoverfly.Core.Tests.Hoverfly_Test.&lt;ShouldReturnCorrectRestultFromAPutRequest_WhenImportingSimulationAndUsingSimulationMode&gt;d__10.MoveNext() in E:\hoverfly_code\hoverfly-dotnet\src\Hoverfly.Core.Tests\Hoverfly_Test.cs:line 200
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)</pre></div>
+    <br />
+    <h2>
+      <a id="all" />All tests
+        </h2>
+    <h5>Click test class name to expand/collapse test details</h5>
+    <h3>
+      <span class="timing">0.171s
+            </span>
+      <span class="clickable" onclick="ToggleClass('classID0EZ')" ondblclick="ToggleClass('classID0EZ')">
+        <span class="success">✔</span>
+               Hoverfly.Core.Tests.Dsl.Dsl_Test
+               <span class="testcount">
+                (5 tests)
+              </span></span>
+      <br clear="all" />
+    </h3>
+    <div class="indent" style="display: none;" id="classID0EZ">
+      <div class="row">
+        <span class="timing">0.000729s
+        </span>
+        <span class="success">✔</span>
+       Hoverfly.Core.Tests.Dsl.Dsl_Test.ShouldReturnCorrectDelaySettings_WhenUsingGet<br clear="all" /></div>
+      <div class="altrow">
+        <span class="timing">0.0007109s
+        </span>
+        <span class="success">✔</span>
+       Hoverfly.Core.Tests.Dsl.Dsl_Test.ShouldReturnCorrectDelaySettings_WhenUsingPost<br clear="all" /></div>
+      <div class="row">
+        <span class="timing">0.1672394s
+        </span>
+        <span class="success">✔</span>
+       Hoverfly.Core.Tests.Dsl.Dsl_Test.ShouldReturnCorrectDelaySettings_WhenUsingPut<br clear="all" /></div>
+      <div class="altrow">
+        <span class="timing">0.0009437s
+        </span>
+        <span class="success">✔</span>
+       Hoverfly.Core.Tests.Dsl.Dsl_Test.ShouldReturnCorrectNumberDelays_WhenGettingSimulation<br clear="all" /></div>
+      <div class="row">
+        <span class="timing">0.000892s
+        </span>
+        <span class="success">✔</span>
+       Hoverfly.Core.Tests.Dsl.Dsl_Test.ShouldReturnCorrectNumberOfRequest_WhenGettingSimulation<br clear="all" /></div>
+    </div>
+    <h3>
+      <span class="timing">0.012s
+            </span>
+      <span class="clickable" onclick="ToggleClass('classID0E5B')" ondblclick="ToggleClass('classID0E5B')">
+        <span class="success">✔</span>
+               Hoverfly.Core.Tests.Dsl.StubServiceBuilder_Test
+               <span class="testcount">
+                (9 tests)
+              </span></span>
+      <br clear="all" />
+    </h3>
+    <div class="indent" style="display: none;" id="classID0E5B">
+      <div class="row">
+        <span class="timing">0.0005554s
+        </span>
+        <span class="success">✔</span>
+       Hoverfly.Core.Tests.Dsl.StubServiceBuilder_Test.ShouldCreateARequestWithHttpsUrlScheme<br clear="all" /></div>
+      <div class="altrow">
+        <span class="timing">0.0005344s
+        </span>
+        <span class="success">✔</span>
+       Hoverfly.Core.Tests.Dsl.StubServiceBuilder_Test.ShouldCreateARequestWithHttpUrlScheme<br clear="all" /></div>
+      <div class="row">
+        <span class="timing">0.0012126s
+        </span>
+        <span class="success">✔</span>
+       Hoverfly.Core.Tests.Dsl.StubServiceBuilder_Test.ShouldCreateCorrectResponse<br clear="all" /></div>
+      <div class="altrow">
+        <span class="timing">0.000697s
+        </span>
+        <span class="success">✔</span>
+       Hoverfly.Core.Tests.Dsl.StubServiceBuilder_Test.ShouldCreateDeleteRequest<br clear="all" /></div>
+      <div class="row">
+        <span class="timing">0.0008571s
+        </span>
+        <span class="success">✔</span>
+       Hoverfly.Core.Tests.Dsl.StubServiceBuilder_Test.ShouldCreateGetRequest<br clear="all" /></div>
+      <div class="altrow">
+        <span class="timing">0.0010431s
+        </span>
+        <span class="success">✔</span>
+       Hoverfly.Core.Tests.Dsl.StubServiceBuilder_Test.ShouldCreatePostRequest<br clear="all" /></div>
+      <div class="row">
+        <span class="timing">0.000534s
+        </span>
+        <span class="success">✔</span>
+       Hoverfly.Core.Tests.Dsl.StubServiceBuilder_Test.ShouldCreatePutRequest<br clear="all" /></div>
+      <div class="altrow">
+        <span class="timing">0.0055756s
+        </span>
+        <span class="success">✔</span>
+       Hoverfly.Core.Tests.Dsl.StubServiceBuilder_Test.ShouldCreateRequest<br clear="all" /></div>
+      <div class="row">
+        <span class="timing">0.0005192s
+        </span>
+        <span class="success">✔</span>
+       Hoverfly.Core.Tests.Dsl.StubServiceBuilder_Test.ShouldDefaultToHttpScheme_WhenCreatingRequestWithOutSchema<br clear="all" /></div>
+    </div>
+    <h3>
+      <span class="timing">0.090s
+            </span>
+      <span class="clickable" onclick="ToggleClass('classID0EEG')" ondblclick="ToggleClass('classID0EEG')">
+        <span class="success">✔</span>
+               Hoverfly.Core.Tests.FileSimulationSource_Test
+               <span class="testcount">
+                (2 tests)
+              </span></span>
+      <br clear="all" />
+    </h3>
+    <div class="indent" style="display: none;" id="classID0EEG">
+      <div class="row">
+        <span class="timing">0.001268s
+        </span>
+        <span class="success">✔</span>
+       Hoverfly.Core.Tests.FileSimulationSource_Test.ShouldReturnCorrectSimulationDate<br clear="all" /></div>
+      <div class="altrow">
+        <span class="timing">0.0887227s
+        </span>
+        <span class="success">✔</span>
+       Hoverfly.Core.Tests.FileSimulationSource_Test.ShouldSaveTheSimulation<br clear="all" /></div>
+    </div>
+    <h3>
+      <span class="timing">26.388s
+            </span>
+      <span class="clickable" onclick="ToggleClass('classID0EXG')" ondblclick="ToggleClass('classID0EXG')">
+        <span class="failure">✘</span>
+               Hoverfly.Core.Tests.Hoverfly_Test
+               <span class="testcount">
+                (21 tests)
+              </span></span>
+      <br clear="all" />
+    </h3>
+    <div class="indent" id="classID0EXG">
+      <div class="row">
+        <span class="timing">3.2758449s
+        </span>
+        <span class="success">✔</span>
+       Hoverfly.Core.Tests.Hoverfly_Test.ShouldBeDelay_WhenAddingADelaryToRequestWithDsl<br clear="all" /></div>
+      <div class="altrow">
+        <span class="timing">1.3723605s
+        </span>
+        <span class="success">✔</span>
+       Hoverfly.Core.Tests.Hoverfly_Test.ShouldExportSimulation<br clear="all" /></div>
+      <div class="row">
+        <span class="timing">1.1880705s
+        </span>
+        <span class="success">✔</span>
+       Hoverfly.Core.Tests.Hoverfly_Test.ShouldGetCorrectResponse_WhenUsingDsl<br clear="all" /></div>
+      <div class="altrow">
+        <span class="timing">1.3773824s
+        </span>
+        <span class="success">✔</span>
+       Hoverfly.Core.Tests.Hoverfly_Test.ShouldGetExternalResponse_WhenUsingSpyModeAndSimulationIsNotAdded<br clear="all" /></div>
+      <div class="row">
+        <span class="timing">1.2652284s
+        </span>
+        <span class="success">✔</span>
+       Hoverfly.Core.Tests.Hoverfly_Test.ShouldGetHeaderInTheSimulation_WhenCapturingAllHeaders<br clear="all" /></div>
+      <div class="altrow">
+        <span class="timing">1.2680754s
+        </span>
+        <span class="success">✔</span>
+       Hoverfly.Core.Tests.Hoverfly_Test.ShouldGetHeaderInTheSimulation_WhenCapturingSpecificHeader<br clear="all" /></div>
+      <div class="row">
+        <span class="timing">1.1663638s
+        </span>
+        <span class="success">✔</span>
+       Hoverfly.Core.Tests.Hoverfly_Test.ShouldGetSimulationResponse_WhenUsingSpyModeAndSimulationIsAreadyAdded<br clear="all" /></div>
+      <div class="altrow">
+        <span class="timing">1.3389643s
+        </span>
+        <span class="success">✔</span>
+       Hoverfly.Core.Tests.Hoverfly_Test.ShouldNotCaptureNoneCaptureHeader_WhenCapturingSpecificHeader<br clear="all" /></div>
+      <div class="row">
+        <span class="timing">1.1566164s
+        </span>
+        <span class="success">✔</span>
+       Hoverfly.Core.Tests.Hoverfly_Test.ShouldReturnCaptureMode_WhenHoverFlyIsSetToUseCaptureMode<br clear="all" /></div>
+      <div class="altrow">
+        <span class="timing">0.0008969s
+        </span>
+        <span class="success">✔</span>
+       Hoverfly.Core.Tests.Hoverfly_Test.ShouldReturnCorrectConfiguredAdminPort<br clear="all" /></div>
+      <div class="row">
+        <span class="timing">0.0009724s
+        </span>
+        <span class="success">✔</span>
+       Hoverfly.Core.Tests.Hoverfly_Test.ShouldReturnCorrectConfiguredProxyPort<br clear="all" /></div>
+      <div class="altrow">
+        <span class="timing">1.147585s
+        </span>
+        <span class="success">✔</span>
+       Hoverfly.Core.Tests.Hoverfly_Test.ShouldReturnCorrectHoverflyMode<br clear="all" /></div>
+      <div class="row">
+        <span class="timing">1.2593609s
+        </span>
+        <span class="success">✔</span>
+       Hoverfly.Core.Tests.Hoverfly_Test.ShouldReturnCorrectMode_WhenHoverflyModeIsChanged<br clear="all" /></div>
+      <div class="altrow">
+        <span class="timing">1.8599643s
+        </span>
+        <span class="failure">✘</span>
+       Hoverfly.Core.Tests.Hoverfly_Test.ShouldReturnCorrectRestultFromAPutRequest_WhenImportingSimulationAndUsingSimulationMode<br clear="all" /><pre>System.TimeoutException : Timeout while waiting for Hoverfly process to be closed.</pre><pre>   at Hoverfly.Core.Hoverfly.Stop() in E:\hoverfly_code\hoverfly-dotnet\src\Hoverfly.Core\Hoverfly.cs:line 96
+   at Hoverfly.Core.Tests.Hoverfly_Test.&lt;ShouldReturnCorrectRestultFromAPutRequest_WhenImportingSimulationAndUsingSimulationMode&gt;d__10.MoveNext() in E:\hoverfly_code\hoverfly-dotnet\src\Hoverfly.Core.Tests\Hoverfly_Test.cs:line 200
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)</pre></div>
+      <div class="row">
+        <span class="timing">1.2919139s
+        </span>
+        <span class="success">✔</span>
+       Hoverfly.Core.Tests.Hoverfly_Test.ShouldReturnCorrectRestultFromARequest_WhenImportingSimulationAndUsingSimulationMode<br clear="all" /></div>
+      <div class="altrow">
+        <span class="timing">1.3046868s
+        </span>
+        <span class="success">✔</span>
+       Hoverfly.Core.Tests.Hoverfly_Test.ShouldReturnCorrectSimluationFromHoverfly_WhenImportingSimulation<br clear="all" /></div>
+      <div class="row">
+        <span class="timing">1.2749323s
+        </span>
+        <span class="success">✔</span>
+       Hoverfly.Core.Tests.Hoverfly_Test.ShouldReturnCorrectSimulationDataResult_WhenHoverflyInSimulationMode<br clear="all" /></div>
+      <div class="altrow">
+        <span class="timing">1.1663388s
+        </span>
+        <span class="success">✔</span>
+       Hoverfly.Core.Tests.Hoverfly_Test.ShouldReturnCorrectSimulations_WhenUsingAnExistingSimulateAndWhenAddingOne<br clear="all" /></div>
+      <div class="row">
+        <span class="timing">1.1626207s
+        </span>
+        <span class="success">✔</span>
+       Hoverfly.Core.Tests.Hoverfly_Test.ShouldReturnSimulateMode_WhenHoverFlyIsSetToUseSimulateMode<br clear="all" /></div>
+      <div class="altrow">
+        <span class="timing">1.2227803s
+        </span>
+        <span class="success">✔</span>
+       Hoverfly.Core.Tests.Hoverfly_Test.ShouldReturnSpyMode_WhenHoverFlyIsSetToUseSpyMode<br clear="all" /></div>
+      <div class="row">
+        <span class="timing">1.2869417s
+        </span>
+        <span class="success">✔</span>
+       Hoverfly.Core.Tests.Hoverfly_Test.ShouldUseRemoteHovervyInstance<br clear="all" /></div>
+    </div>
+    <h3>
+      <span class="timing">17.584s
+            </span>
+      <span class="clickable" onclick="ToggleClass('classID0E2D')" ondblclick="ToggleClass('classID0E2D')">
+        <span class="success">✔</span>
+               Hoverfly.Core.Tests.HoverflyRunner_Test
+               <span class="testcount">
+                (11 tests)
+              </span></span>
+      <br clear="all" />
+    </h3>
+    <div class="indent" style="display: none;" id="classID0E2D">
+      <div class="row">
+        <span class="timing">1.7993158s
+        </span>
+        <span class="success">✔</span>
+       Hoverfly.Core.Tests.HoverflyRunner_Test.ShouldExportSimulationOnStop_WhenInCaptureMode<br clear="all" /></div>
+      <div class="altrow">
+        <span class="timing">1.4445898s
+        </span>
+        <span class="success">✔</span>
+       Hoverfly.Core.Tests.HoverflyRunner_Test.ShouldGetExternalResponse_WhenUsingSpyModeAndSimulationIsNotAdded<br clear="all" /></div>
+      <div class="row">
+        <span class="timing">1.4072367s
+        </span>
+        <span class="success">✔</span>
+       Hoverfly.Core.Tests.HoverflyRunner_Test.ShouldGetSimulationResponse_WhenUsingSpyModeAndSimulationDslIsAreadyAdded<br clear="all" /></div>
+      <div class="altrow">
+        <span class="timing">1.2666131s
+        </span>
+        <span class="success">✔</span>
+       Hoverfly.Core.Tests.HoverflyRunner_Test.ShouldGetSimulationResponse_WhenUsingSpyModeAndSimulationDslIsAreadyAddedDuringStart<br clear="all" /></div>
+      <div class="row">
+        <span class="timing">1.1956876s
+        </span>
+        <span class="success">✔</span>
+       Hoverfly.Core.Tests.HoverflyRunner_Test.ShouldGetSimulationResponse_WhenUsingSpyModeAndSimulationFromFileIsAreadyAdded<br clear="all" /></div>
+      <div class="altrow">
+        <span class="timing">1.273303s
+        </span>
+        <span class="success">✔</span>
+       Hoverfly.Core.Tests.HoverflyRunner_Test.ShouldLoadSimulation_WhenStartInSimulationModeWithASimulationSource<br clear="all" /></div>
+      <div class="row">
+        <span class="timing">1.1884374s
+        </span>
+        <span class="success">✔</span>
+       Hoverfly.Core.Tests.HoverflyRunner_Test.ShouldLoadSimulation_WhenStartInSimulationModeWithASimulationSourceAsFile<br clear="all" /></div>
+      <div class="altrow">
+        <span class="timing">2.8065585s
+        </span>
+        <span class="success">✔</span>
+       Hoverfly.Core.Tests.HoverflyRunner_Test.ShouldReturnCorrectSimulation_WhenUsingSimulateWithDsl<br clear="all" /></div>
+      <div class="row">
+        <span class="timing">1.195461s
+        </span>
+        <span class="success">✔</span>
+       Hoverfly.Core.Tests.HoverflyRunner_Test.ShouldReturnCorrectSimulations_WhenUsingAnExistingSimulateAndWhenAddingOne<br clear="all" /></div>
+      <div class="altrow">
+        <span class="timing">1.2315108s
+        </span>
+        <span class="success">✔</span>
+       Hoverfly.Core.Tests.HoverflyRunner_Test.ShouldStartInCaptureMode<br clear="all" /></div>
+      <div class="row">
+        <span class="timing">2.7755935s
+        </span>
+        <span class="success">✔</span>
+       Hoverfly.Core.Tests.HoverflyRunner_Test.ShouldStartInSimulationMode<br clear="all" /></div>
+    </div>
+  </body>
+</html>

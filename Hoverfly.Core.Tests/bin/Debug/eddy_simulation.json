@@ -1,0 +1,30 @@
+{
+  "data": {
+    "pairs": [
+      {
+        "response": {
+          "status": 200,
+          "body": "[\"value1\",\"value2\"]",
+          "encodedBody": false,
+          "headers": {
+            "Connection": [ "keep-alive" ],
+            "Content-Type": [ "application/json; charset=utf-8" ],
+            "Date": [ "Sat, 09 Mar 2019 21:18:05 GMT" ],
+            "Hoverfly": [ "Was-Here" ],
+            "Server": [ "nginx/1.12.2" ]
+          }
+        },
+        "request": {
+          "path": { "exactMatch": "/ccwsapi" },
+          "method": { "exactMatch": "GET" },
+          "destination": { "exactMatch": "191.96.42.75:9999" },
+          "scheme": { "exactMatch": "http" },
+          "query": { "exactMatch": "" },
+          "body": { "exactMatch": "" }
+        }
+      }
+    ],
+    "globalActions": { "delays": [] }
+  },
+  "meta": { "schemaVersion": "v4" }
+}
