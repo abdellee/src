@@ -1,0 +1,30 @@
+{
+  "data": {
+    "pairs": [
+      {
+        "response": {
+          "status": 500,
+          "body": "",
+          "encodedBody": false,
+          "headers": {
+            "Connection": [ "keep-alive" ],
+            "Content-Length": [ "0" ],
+            "Date": [ "Thu, 14 Mar 2019 23:33:37 GMT" ],
+            "Hoverfly": [ "Was-Here" ],
+            "Server": [ "nginx/1.12.2" ]
+          }
+        },
+        "request": {
+          "path": { "exactMatch": "/classify" },
+          "method": { "exactMatch": "GET" },
+          "destination": { "exactMatch": "191.96.42.75:9999" },
+          "scheme": { "exactMatch": "http" },
+          "query": { "exactMatch": "" },
+          "body": { "exactMatch": "" }
+        }
+      }
+    ],
+    "globalActions": { "delays": [] }
+  },
+  "meta": { "schemaVersion": "v4" }
+}

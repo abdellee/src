@@ -21,3 +21,4 @@ E:\hoverfly_code\hoverfly-dotnet\src\Hoverfly.Core.Tests\obj\Debug\Hoverfly.Core
 E:\hoverfly_code\hoverfly-dotnet\src\Hoverfly.Core.Tests\obj\Debug\Hoverfly.Core.Tests.csprojAssemblyReference.cache
 E:\hoverfly_code\hoverfly-dotnet\src\Hoverfly.Core.Tests\obj\Debug\Hoverfly.Core.Tests.csproj.CoreCompileInputs.cache
 E:\hoverfly_code\hoverfly-dotnet\src\Hoverfly.Core.Tests\obj\Debug\Hoverfly.Core.Tests.csproj.CopyComplete
+E:\hoverfly_code\hoverfly-dotnet\src\Hoverfly.Core.Tests\bin\Debug\createrequestsoapbody.xml

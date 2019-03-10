@@ -6,4 +6,3 @@ E:\hoverfly_code\hoverfly-dotnet\src\Hoverfly.Core\obj\Debug\Hoverfly.Core.dll
 E:\hoverfly_code\hoverfly-dotnet\src\Hoverfly.Core\obj\Debug\Hoverfly.Core.pdb
 E:\hoverfly_code\hoverfly-dotnet\src\Hoverfly.Core\obj\Debug\Hoverfly.Core.csproj.CoreCompileInputs.cache
 E:\hoverfly_code\hoverfly-dotnet\src\Hoverfly.Core\obj\Debug\Hoverfly.Core.csproj.CopyComplete
-E:\hoverfly_code\hoverfly-dotnet\src\Hoverfly.Core\obj\Debug\Hoverfly.Core.csprojAssemblyReference.cache

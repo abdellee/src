@@ -15,6 +15,7 @@ namespace Hoverfly.Core.Tests
     using System.Net.Http;
     using System.Threading;
     using System.Threading.Tasks;
+    using System.Xml.Linq;
     using Xunit;
     using static Core.Dsl.HoverflyDsl;
     using static Core.Dsl.ResponseCreators;
@@ -43,7 +44,8 @@ namespace Hoverfly.Core.Tests
             Assert.Equal(8880, hoverfly.GetAdminPort());
         }
 
-
+        // E:\hoverfly_code\hoverfly-dotnet\src\Hoverfly.Core.Tests\bin\Debug\..\..\..\packages\SpectoLabs.Hoverfly.0.15.0\tools\
+        // E:\magnalane\public web services\CCWS\CCWS-Hoverfly-IT\bin\Debug\netcoreapp2.2\..\..\..\packages\SpectoLabs.Hoverfly.0.15.0\tools\
         [Fact]
         public void ShouldReturnSimulateMode_WhenHoverFlyIsSetToUseSimulateMode()
         {
@@ -51,6 +53,7 @@ namespace Hoverfly.Core.Tests
             {
                 hoverfly.Start();
                 Assert.Equal(HoverflyMode.Simulate, hoverfly.GetMode());
+                hoverfly.Stop();
             }
         }
 
@@ -91,12 +94,52 @@ namespace Hoverfly.Core.Tests
                 result = GetContentFrom("https://samples.openweathermap.org/data/2.5/box/city?bbox=12,32,15,37,10&appid=b6907d289e10d714a6e88b30761fae22");
                 result = GetContentFrom("https://samples.openweathermap.org/data/2.5/find?lat=55.5&lon=37.5&cnt=10&appid=b6907d289e10d714a6e88b30761fae22");
                 result = GetContentFrom("https://samples.openweathermap.org/data/2.5/group?id=524901,703448,2643743&units=metric&appid=b6907d289e10d714a6e88b30761fae22");
-                var destinatonSource = new FileSimulationSource("eddy_simulation_weather.json");
+                var destinatonSource = new FileSimulationSource("eddy_simulation_weather_031419.json");
                 hoverfly.ExportSimulation(destinatonSource);
 
-                hoverfly.Stop(); 
+                hoverfly.Stop();
             }
         }
+
+        /// <summary>
+        /// capture from https
+        /// </summary>
+        [Fact]
+        public void ShouldExportSimulation_With_Sabre_Capture()
+        {
+            using (var hoverfly = new Hoverfly(HoverflyMode.Capture, HoverFlyTestConfig.GetHoverFlyConfigWIthBasePath()))
+            {
+                hoverfly.Start();
+                string result = GetContentFromUsingHttpRequestWithSOAP("https://webservices.havail.sabre.com/websvc", GetCreateSessionBody());
+                var destinatonSource = new FileSimulationSource("eddy_capture_sabre_031419_sabre.json");
+                hoverfly.ExportSimulation(destinatonSource);
+
+                hoverfly.Stop();
+            }
+        }
+        /// <summary>
+        /// capture from https
+        /// </summary>
+        [Fact]
+        public void ShouldExportSimulation_With_Sabre_Simulate()
+        {
+            using (var hoverfly = new Hoverfly(HoverflyMode.Simulate, HoverFlyTestConfig.GetHoverFlyConfigWIthBasePath()))
+            {
+                hoverfly.Start();
+                hoverfly.ImportSimulation(new FileSimulationSource(@"eddy_capture_sabre_031419_sabre.json"));
+
+                string result = GetContentFromUsingHttpRequestWithSOAP("https://webservices.havail.sabre.com/websvc", GetCreateSessionBody());
+                hoverfly.Stop();
+
+                Assert.Contains("webservices.sabre.com", result);
+            }
+        }
+        private string GetCreateSessionBody()
+        {
+            XElement soapBody = XElement.Load(@"createrequestsoapbody.xml");
+            return soapBody.ToString();
+        }
+
         [Fact]
         public void ShouldExportSimulation_WithNginx_Weather_Simulate()
         {
@@ -121,7 +164,7 @@ namespace Hoverfly.Core.Tests
                 string result = GetContentFrom("http://191.96.42.75:9999/classify");
 
                 //http://localhost:8888/api/v2/simulation
-                var destinatonSource = new FileSimulationSource("eddy_simulation_classify.json");
+                var destinatonSource = new FileSimulationSource("eddy_simulation_classify_remoteserver.json");
                 hoverfly.ExportSimulation(destinatonSource);
 
                 hoverfly.Stop();
@@ -641,6 +684,56 @@ namespace Hoverfly.Core.Tests
                 // do nothing
             }
             return test;
+        }
+        private string GetContentFromUsingHttpRequestWithSOAP(string m_endPointUrl, string soapBody)
+        {
+            String test = String.Empty;
+            {
+                System.Net.WebResponse resp = null;
+                Stream str = null;
+                DateTime startTime = DateTime.Now;
+
+                try
+                {
+                    Uri myUri = new Uri(m_endPointUrl);
+                    HttpWebRequest req = (HttpWebRequest)WebRequest.Create(myUri);
+                    req.ContentType = "text/xml; charset=utf-8";
+                    req.Method = "POST";
+                    req.Headers.Add("SOAPAction", "");
+                    req.KeepAlive = true;
+                    req.Timeout = 60 * 1000;
+
+                    byte[] bytes = Encoding.UTF8.GetBytes(soapBody);
+                    req.ContentLength = bytes.Length;
+                    using (var outputStream = req.GetRequestStream())
+                    {
+                        outputStream.Write(bytes, 0, bytes.Length);
+                        outputStream.Close();
+                    }
+
+                    resp = req.GetResponse();
+                    TimeSpan elapsedTime = DateTime.Now - startTime;
+
+                    using (str = resp.GetResponseStream())
+                    {
+                        StreamReader reader = new StreamReader(str);
+                        test = reader.ReadToEnd();
+                        reader.Close();
+                        str.Close();
+                    }
+                }
+                catch (WebException ex)
+                {
+                    TimeSpan elapsedTime = DateTime.Now - startTime;
+                    string logDetails = null;
+                }
+                finally
+                {
+                    if (str != null) { str.Close(); }
+                    if (resp != null) { resp.Close(); }
+                }
+                return test;
+            }
         }
     }
 }

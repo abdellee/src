@@ -67,6 +67,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="bin\Debug\eddy_simulation_weather_031419.json" />
+    <None Include="bin\Debug\eddy_simulation_weather_031419_sabre.json" />
     <None Include="packages.config" />
     <None Include="simulation_test2.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -86,6 +88,11 @@
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\packages\xunit.analyzers.0.8.0\analyzers\dotnet\cs\xunit.analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="createrequestsoapbody.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
