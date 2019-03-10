@@ -1,0 +1,5 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Hoverfly.Core.Tests/bin/Debug/eddy_simulation_weather_031419_sabre.json
