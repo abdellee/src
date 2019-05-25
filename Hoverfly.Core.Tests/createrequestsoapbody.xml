@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Header>
+    <MessageHeader xmlns="http://www.ebxml.org/namespaces/messageHeader">
+      <ConversationId>C201903142001599190@concur.com</ConversationId>
+      <From>
+        <PartyId>concur.com</PartyId>
+      </From>
+      <To>
+        <PartyId>webservices.sabre.com</PartyId>
+      </To>
+      <CPAId>6YB9</CPAId>
+      <Service ebi:type="sabreXML" xmlns:ebi="http://www.ebxml.org/namespaces/messageHeader">SessionCreate</Service>
+      <Action>SessionCreateRQ</Action>
+      <MessageData>
+        <MessageId>mid:20190314-200159-2266@concur.com</MessageId>
+        <Timestamp>2019-03-14T20:01:59</Timestamp>
+      </MessageData>
+    </MessageHeader>
+    <Security xmlns="http://schemas.xmlsoap.org/ws/2002/12/secext">
+      <UsernameToken>
+        <Username>8888</Username>
+        <Password>CONCUR1</Password>
+        <Organization xmlns="">6YB9</Organization>
+        <Domain xmlns="">DEFAULT</Domain>
+      </UsernameToken>
+    </Security>
+  </soap:Header>
+  <soap:Body>
+    <SessionCreateRQ xmlns="http://www.opentravel.org/OTA/2002/11">
+      <POS>
+        <Source PseudoCityCode="6YB9"/>
+      </POS>
+    </SessionCreateRQ>
+  </soap:Body>
+</soap:Envelope>

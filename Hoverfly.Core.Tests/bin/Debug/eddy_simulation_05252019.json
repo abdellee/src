@@ -1,0 +1,38 @@
+{
+  "data": {
+    "pairs": [
+      {
+        "response": {
+          "status": 200,
+          "body": "{\"coord\":{\"lon\":-0.13,\"lat\":51.51},\"weather\":[{\"id\":300,\"main\":\"Drizzle\",\"description\":\"light intensity drizzle\",\"icon\":\"09d\"}],\"base\":\"stations\",\"main\":{\"temp\":280.32,\"pressure\":1012,\"humidity\":81,\"temp_min\":279.15,\"temp_max\":281.15},\"visibility\":10000,\"wind\":{\"speed\":4.1,\"deg\":80},\"clouds\":{\"all\":90},\"dt\":1485789600,\"sys\":{\"type\":1,\"id\":5091,\"message\":0.0103,\"country\":\"GB\",\"sunrise\":1485762037,\"sunset\":1485794875},\"id\":2643743,\"name\":\"London\",\"cod\":200}",
+          "encodedBody": false,
+          "headers": {
+            "Cache-Control": [ "max-age=0, private, must-revalidate" ],
+            "Connection": [ "keep-alive" ],
+            "Content-Type": [ "application/json; charset=utf-8" ],
+            "Date": [ "Sat, 25 May 2019 17:42:15 GMT" ],
+            "Etag": [ "W/\"e70c27085ed41de5321252b16c9582fe\"" ],
+            "Hoverfly": [ "Was-Here" ],
+            "Server": [ "openresty/1.9.7.1" ],
+            "Transfer-Encoding": [ "chunked" ],
+            "X-Content-Type-Options": [ "nosniff" ],
+            "X-Frame-Options": [ "SAMEORIGIN" ],
+            "X-Request-Id": [ "336c5c46-4ba6-4ca8-856f-ee54ff3c1527" ],
+            "X-Runtime": [ "0.001067" ],
+            "X-Xss-Protection": [ "1; mode=block" ]
+          }
+        },
+        "request": {
+          "path": { "exactMatch": "/data/2.5/weather" },
+          "method": { "exactMatch": "GET" },
+          "destination": { "exactMatch": "samples.openweathermap.org" },
+          "scheme": { "exactMatch": "https" },
+          "query": { "exactMatch": "appid=b6907d289e10d714a6e88b30761fae22&q=London,uk" },
+          "body": { "exactMatch": "" }
+        }
+      }
+    ],
+    "globalActions": { "delays": [] }
+  },
+  "meta": { "schemaVersion": "v4" }
+}

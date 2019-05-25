@@ -101,8 +101,24 @@ namespace Hoverfly.Core.Tests
             }
         }
 
+        [Fact]
+        public void ShouldExportSimulation_Weather_Capture()
+        {
+            //using (var hoverfly = new Hoverfly(HoverflyMode.Capture, HoverFlyTestConfig.GetHoverFlyConfigWIthBasePath()))
+            //{
+            //    hoverfly.Start();
+
+                var result = GetContentFrom("https://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=b6907d289e10d714a6e88b30761fae22");
+
+                //var destinatonSource = new FileSimulationSource("eddy_simulation_05252019_2.json");
+                //hoverfly.ExportSimulation(destinatonSource);
+
+            //    hoverfly.Stop();
+            //}
+        }
         /// <summary>
         /// capture from https
+        /// Create Session
         /// </summary>
         [Fact]
         public void ShouldExportSimulation_With_Sabre_Capture()
@@ -110,8 +126,9 @@ namespace Hoverfly.Core.Tests
             using (var hoverfly = new Hoverfly(HoverflyMode.Capture, HoverFlyTestConfig.GetHoverFlyConfigWIthBasePath()))
             {
                 hoverfly.Start();
-                string result = GetContentFromUsingHttpRequestWithSOAP("https://webservices.havail.sabre.com/websvc", GetCreateSessionBody());
-                var destinatonSource = new FileSimulationSource("eddy_capture_sabre_031419_sabre.json");
+                string result = GetContentFromUsingHttpRequestWithSOAP("https://webservices.havail.sabre.com/websvc", 
+                    GetCreateSessionBody(), false);
+                var destinatonSource = new FileSimulationSource("eddy_capture_sabre_051619_sabre.json");
                 hoverfly.ExportSimulation(destinatonSource);
 
                 hoverfly.Stop();
@@ -126,12 +143,13 @@ namespace Hoverfly.Core.Tests
             using (var hoverfly = new Hoverfly(HoverflyMode.Simulate, HoverFlyTestConfig.GetHoverFlyConfigWIthBasePath()))
             {
                 hoverfly.Start();
-                hoverfly.ImportSimulation(new FileSimulationSource(@"eddy_capture_sabre_031419_sabre.json"));
+                hoverfly.ImportSimulation(new FileSimulationSource(@"eddy_capture_sabre_051619_sabre.json"));
 
-                string result = GetContentFromUsingHttpRequestWithSOAP("https://webservices.havail.sabre.com/websvc", GetCreateSessionBody());
+                string result = GetContentFromUsingHttpRequestWithSOAP("https://webservices.havail.sabre.com/websvc", 
+                    GetCreateSessionBody());
                 hoverfly.Stop();
 
-                Assert.Contains("webservices.sabre.com", result);
+                Assert.Contains("hushaboom", result);
             }
         }
         private string GetCreateSessionBody()
@@ -239,15 +257,16 @@ namespace Hoverfly.Core.Tests
             {
                 hoverfly.Start();
 
-                GetContentFrom("http://echo.jsontest.com/key/value/one/two");
+                var result = GetContentFrom("http://echo.jsontest.com/key/value/one/two");
 
                 //http://localhost:8888/api/v2/simulation
-                var destinatonSource = new FileSimulationSource("eddy_simulation.json");
+                var destinatonSource = new FileSimulationSource("eddy_simulation_05252019.json");
                 hoverfly.ExportSimulation(destinatonSource);
 
                 hoverfly.Stop();
             }
         }
+
 
         [Fact]
         public void ShouldReturnCorrectSimulationDataResult_WhenHoverflyInSimulationMode()
@@ -645,6 +664,7 @@ namespace Hoverfly.Core.Tests
                 Method = HttpMethod.Get,
             };
 
+
             if (headers != null && headers.Any())
             {
                 foreach (var header in headers)
@@ -685,7 +705,7 @@ namespace Hoverfly.Core.Tests
             }
             return test;
         }
-        private string GetContentFromUsingHttpRequestWithSOAP(string m_endPointUrl, string soapBody)
+        private string GetContentFromUsingHttpRequestWithSOAP(string m_endPointUrl, string soapBody, bool useProxy = false, string proxyAddress = "http://191.96.42.75:9999/hoverflyproxy")
         {
             String test = String.Empty;
             {
@@ -702,6 +722,18 @@ namespace Hoverfly.Core.Tests
                     req.Headers.Add("SOAPAction", "");
                     req.KeepAlive = true;
                     req.Timeout = 60 * 1000;
+
+                    // using proxy
+                    if (useProxy)
+                    {
+                        WebProxy myProxy = new WebProxy();
+                        // Create a new Uri object.
+                        Uri newUri = new Uri(proxyAddress);
+                        // Associate the newUri object to 'myProxy' object so that new myProxy settings can be set.
+                        myProxy.Address = newUri;
+                        req.Proxy = myProxy;
+                    }
+                    // 
 
                     byte[] bytes = Encoding.UTF8.GetBytes(soapBody);
                     req.ContentLength = bytes.Length;
